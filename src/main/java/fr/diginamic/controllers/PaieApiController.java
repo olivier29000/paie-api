@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.diginamic.paie.entites.Entreprise;
+import fr.diginamic.Vues.EntrepriseVue;
 import fr.diginamic.services.EntrepriseService;
 
 @RestController
@@ -20,7 +20,7 @@ public class PaieApiController {
 	private static final Logger logger = org.slf4j.LoggerFactory.getLogger(PaieApiController.class);
 
 	@RequestMapping(method = RequestMethod.GET)
-	public List<Entreprise> reqParam() {
+	public List<EntrepriseVue> reqParam() {
 
 		return entrepriseService.afficherEntreprises();
 	}
