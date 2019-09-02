@@ -11,6 +11,12 @@ import fr.diginamic.Vues.EntrepriseVue;
 import fr.diginamic.datajpa.EntrepriseRepository;
 import fr.diginamic.paie.entites.Entreprise;
 
+/**
+ * Classe EntrepriseService
+ * 
+ * @author Diginamic02
+ *
+ */
 @Service
 public class EntrepriseService {
 
@@ -19,6 +25,13 @@ public class EntrepriseService {
 
 	private static final Logger logger = org.slf4j.LoggerFactory.getLogger(EntrepriseService.class);
 
+	/**
+	 * Methode afficherEntreprises retourne la liste des entreprises présentes
+	 * en base de donnée sous la forme d'une EntrepriseVue (code + dénomination
+	 * de l'entreprise)
+	 * 
+	 * @return une liste d'instances de EntrepriseVue
+	 */
 	public List<EntrepriseVue> afficherEntreprises() {
 		// TODO Auto-generated method stub
 

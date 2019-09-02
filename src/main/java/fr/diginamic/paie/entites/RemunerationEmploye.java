@@ -16,6 +16,23 @@ public class RemunerationEmploye {
 	private Integer id;
 	private String matricule;
 
+	/**
+	 * Constructeur
+	 * 
+	 * @param matricule
+	 * @param entreprise
+	 * @param profilRemuneration
+	 * @param grade
+	 */
+	public RemunerationEmploye(String matricule, Entreprise entreprise, ProfilRemuneration profilRemuneration,
+			Grade grade) {
+		super();
+		this.matricule = matricule;
+		this.entreprise = entreprise;
+		this.profilRemuneration = profilRemuneration;
+		this.grade = grade;
+	}
+
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	private Entreprise entreprise;
 

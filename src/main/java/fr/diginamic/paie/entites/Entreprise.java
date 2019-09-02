@@ -18,6 +18,14 @@ public class Entreprise {
 	private String urssaf;
 	private String codeNaf;
 
+	/**
+	 * Constructeur
+	 * 
+	 */
+	public Entreprise() {
+		super();
+	}
+
 	public String getCode() {
 		return code;
 	}

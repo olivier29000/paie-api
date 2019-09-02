@@ -1,12 +1,22 @@
 package fr.diginamic.Vues;
 
+/**
+ * représente une vue de l'objet Entreprise. Cette vue est caractérisée par code
+ * et dénomination qui sont eux même des attributs de l'objet Entreprise
+ * 
+ * @author Diginamic02
+ *
+ */
 public class EntrepriseVue {
 
+	/** code : code de l'entreprise String */
 	private String code;
+	/** denomination : dénomination ou nom de l'entreprise String */
 	private String denomination;
 
 	/**
-	 * Constructeur
+	 * Constructeur permettant de créer une instance de EntrepriseVue avec les
+	 * attributs code et dénomination
 	 * 
 	 * @param code
 	 * @param denomination
