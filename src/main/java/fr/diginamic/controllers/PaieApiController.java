@@ -53,7 +53,7 @@ public class PaieApiController {
 	 * 
 	 * @return une liste d'instances de EntrepriseVue
 	 */
-	@RequestMapping(path = "/referentiels_ajouter_un_employe", method = RequestMethod.GET)
+	@RequestMapping(path = "/remuneration_employe", method = RequestMethod.GET)
 	public AjouterUnEmployeVue reqParamAjouterUnEmploye() {
 
 		return ajouterUnEmployeService.afficherAjouterUnEmploye();
@@ -104,7 +104,7 @@ public class PaieApiController {
 	 * @param corpsPostRemunerationEmploye
 	 * @return
 	 */
-	@PostMapping(path = "/ajouter_un_employe")
+	@PostMapping(path = "/remuneration_employe")
 	public String reqBodyInsererRemunerationEmploye(
 			@RequestBody CorpsPostRemunerationEmploye corpsPostRemunerationEmploye) {
 
