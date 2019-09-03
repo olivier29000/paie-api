@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
 @Entity
 public class RemunerationEmploye {
@@ -39,7 +38,7 @@ public class RemunerationEmploye {
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	private ProfilRemuneration profilRemuneration;
 
-	@OneToOne(cascade = CascadeType.PERSIST)
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	private Grade grade;
 
 	public String getMatricule() {

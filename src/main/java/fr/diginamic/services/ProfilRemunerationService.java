@@ -39,4 +39,16 @@ public class ProfilRemunerationService {
 		return listeDesProfilRemunerationVue;
 	}
 
+	public ProfilRemuneration retrouverProfilRemunerationEnFonctionId(int id) {
+		// TODO Auto-generated method stub
+
+		return profilRemunerationRepository.findById(id);
+	}
+
+	public ProfilRemuneration retrouverProfilRemunerationEnFonctionCode(String code) {
+		// TODO Auto-generated method stub
+
+		return profilRemunerationRepository.findByCode(code);
+	}
+
 }

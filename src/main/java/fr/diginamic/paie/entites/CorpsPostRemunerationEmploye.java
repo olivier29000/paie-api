@@ -4,9 +4,26 @@ public class CorpsPostRemunerationEmploye {
 
 	private int id;
 	private String matricule;
-	private int idEntreprise;
-	private int idProfilRemuneration;
-	private int idGrade;
+	private String codeEntreprise;
+	private String codeProfilRemuneration;
+	private String codeGrade;
+
+	/**
+	 * Constructeur
+	 * 
+	 * @param matricule
+	 * @param codeEntreprise
+	 * @param codeProfilRemuneration
+	 * @param codeGrade
+	 */
+	public CorpsPostRemunerationEmploye(String matricule, String codeEntreprise, String codeProfilRemuneration,
+			String codeGrade) {
+		super();
+		this.matricule = matricule;
+		this.codeEntreprise = codeEntreprise;
+		this.codeProfilRemuneration = codeProfilRemuneration;
+		this.codeGrade = codeGrade;
+	}
 
 	/**
 	 * Constructeur
@@ -14,22 +31,6 @@ public class CorpsPostRemunerationEmploye {
 	 */
 	public CorpsPostRemunerationEmploye() {
 		super();
-	}
-
-	/**
-	 * Constructeur
-	 * 
-	 * @param matricule
-	 * @param idEntreprise
-	 * @param idProfilRemuneration
-	 * @param idGrade
-	 */
-	public CorpsPostRemunerationEmploye(String matricule, int idEntreprise, int idProfilRemuneration, int idGrade) {
-		super();
-		this.matricule = matricule;
-		this.idEntreprise = idEntreprise;
-		this.idProfilRemuneration = idProfilRemuneration;
-		this.idGrade = idGrade;
 	}
 
 	/**
@@ -50,54 +51,54 @@ public class CorpsPostRemunerationEmploye {
 	}
 
 	/**
-	 * @return the idEntreprise
+	 * @return the codeEntreprise
 	 */
-	public int getIdEntreprise() {
-		return idEntreprise;
+	public String getCodeEntreprise() {
+		return codeEntreprise;
 	}
 
 	/**
 	 * Setter
 	 * 
-	 * @param idEntreprise
-	 *            the idEntreprise to set
+	 * @param codeEntreprise
+	 *            the codeEntreprise to set
 	 */
-	public void setIdEntreprise(int idEntreprise) {
-		this.idEntreprise = idEntreprise;
+	public void setCodeEntreprise(String codeEntreprise) {
+		this.codeEntreprise = codeEntreprise;
 	}
 
 	/**
-	 * @return the idProfilRemuneration
+	 * @return the codeProfilRemuneration
 	 */
-	public int getIdProfilRemuneration() {
-		return idProfilRemuneration;
-	}
-
-	/**
-	 * Setter
-	 * 
-	 * @param idProfilRemuneration
-	 *            the idProfilRemuneration to set
-	 */
-	public void setIdProfilRemuneration(int idProfilRemuneration) {
-		this.idProfilRemuneration = idProfilRemuneration;
-	}
-
-	/**
-	 * @return the idGrade
-	 */
-	public int getIdGrade() {
-		return idGrade;
+	public String getCodeProfilRemuneration() {
+		return codeProfilRemuneration;
 	}
 
 	/**
 	 * Setter
 	 * 
-	 * @param idGrade
-	 *            the idGrade to set
+	 * @param codeProfilRemuneration
+	 *            the codeProfilRemuneration to set
 	 */
-	public void setIdGrade(int idGrade) {
-		this.idGrade = idGrade;
+	public void setCodeProfilRemuneration(String codeProfilRemuneration) {
+		this.codeProfilRemuneration = codeProfilRemuneration;
+	}
+
+	/**
+	 * @return the codeGrade
+	 */
+	public String getCodeGrade() {
+		return codeGrade;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param codeGrade
+	 *            the codeGrade to set
+	 */
+	public void setCodeGrade(String codeGrade) {
+		this.codeGrade = codeGrade;
 	}
 
 }

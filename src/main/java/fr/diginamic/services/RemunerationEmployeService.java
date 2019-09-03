@@ -11,9 +11,18 @@ public class RemunerationEmployeService {
 
 	@Autowired
 	private RemunerationEmployeRepository remunerationEmployeRepository;
+	@Autowired
+	private ApiCollegueService apiCollegueService;
 
-	public void ajouterRemunerationEmployeEnBaseDeDonnee(RemunerationEmploye remunerationEmploye) {
-		remunerationEmployeRepository.save(remunerationEmploye);
+	public String ajouterRemunerationEmployeEnBaseDeDonnee(RemunerationEmploye remunerationEmploye) {
+
+		if (apiCollegueService.matriculeEmployeExisteChezApiCollegue(remunerationEmploye.getMatricule())) {
+			remunerationEmployeRepository.save(remunerationEmploye);
+			return "ok";
+		} else {
+			return "{ \"message\" : \"le matricule est absent de l'api collègue\" }";
+		}
+
 	}
 
 }

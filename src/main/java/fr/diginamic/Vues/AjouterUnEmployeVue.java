@@ -4,9 +4,9 @@ import java.util.List;
 
 public class AjouterUnEmployeVue {
 
-	public List<EntrepriseVue> listeDesEntreprises;
-	public List<GradeVue> listeDesGrades;
-	public List<ProfilRemunerationVue> listeDesProfilRemunerations;
+	public List<EntrepriseVue> listeDesEntreprisesVue;
+	public List<GradeVue> listeDesGradesVue;
+	public List<ProfilRemunerationVue> listeDesProfilRemunerationsVue;
 
 	/**
 	 * Constructeur
@@ -15,19 +15,19 @@ public class AjouterUnEmployeVue {
 	 * @param listeDesGrades
 	 * @param listeDesProfilRemunerations
 	 */
-	public AjouterUnEmployeVue(List<EntrepriseVue> listeDesEntreprises, List<GradeVue> listeDesGrades,
-			List<ProfilRemunerationVue> listeDesProfilRemunerations) {
+	public AjouterUnEmployeVue(List<EntrepriseVue> listeDesEntreprisesVue, List<GradeVue> listeDesGradesVue,
+			List<ProfilRemunerationVue> listeDesProfilRemunerationsVue) {
 		super();
-		this.listeDesEntreprises = listeDesEntreprises;
-		this.listeDesGrades = listeDesGrades;
-		this.listeDesProfilRemunerations = listeDesProfilRemunerations;
+		this.listeDesEntreprisesVue = listeDesEntreprisesVue;
+		this.listeDesGradesVue = listeDesGradesVue;
+		this.listeDesProfilRemunerationsVue = listeDesProfilRemunerationsVue;
 	}
 
 	/**
 	 * @return the listeDesEntreprises
 	 */
 	public List<EntrepriseVue> getListeDesEntreprises() {
-		return listeDesEntreprises;
+		return listeDesEntreprisesVue;
 	}
 
 	/**
@@ -37,14 +37,14 @@ public class AjouterUnEmployeVue {
 	 *            the listeDesEntreprises to set
 	 */
 	public void setListeDesEntreprises(List<EntrepriseVue> listeDesEntreprises) {
-		this.listeDesEntreprises = listeDesEntreprises;
+		this.listeDesEntreprisesVue = listeDesEntreprises;
 	}
 
 	/**
 	 * @return the listeDesGrades
 	 */
 	public List<GradeVue> getListeDesGrades() {
-		return listeDesGrades;
+		return listeDesGradesVue;
 	}
 
 	/**
@@ -54,14 +54,14 @@ public class AjouterUnEmployeVue {
 	 *            the listeDesGrades to set
 	 */
 	public void setListeDesGrades(List<GradeVue> listeDesGrades) {
-		this.listeDesGrades = listeDesGrades;
+		this.listeDesGradesVue = listeDesGrades;
 	}
 
 	/**
 	 * @return the listeDesProfilRemunerations
 	 */
 	public List<ProfilRemunerationVue> getListeDesProfilRemunerations() {
-		return listeDesProfilRemunerations;
+		return listeDesProfilRemunerationsVue;
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class AjouterUnEmployeVue {
 	 *            the listeDesProfilRemunerations to set
 	 */
 	public void setListeDesProfilRemunerations(List<ProfilRemunerationVue> listeDesProfilRemunerations) {
-		this.listeDesProfilRemunerations = listeDesProfilRemunerations;
+		this.listeDesProfilRemunerationsVue = listeDesProfilRemunerations;
 	}
 
 }

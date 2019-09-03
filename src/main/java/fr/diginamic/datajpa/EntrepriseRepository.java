@@ -6,4 +6,7 @@ import fr.diginamic.paie.entites.Entreprise;
 
 public interface EntrepriseRepository extends JpaRepository<Entreprise, String> {
 
+	Entreprise findById(int id);
+
+	Entreprise findByCode(String code);
 }

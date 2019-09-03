@@ -6,4 +6,8 @@ import fr.diginamic.paie.entites.Grade;
 
 public interface GradeRepository extends JpaRepository<Grade, String> {
 
+	Grade findById(int id);
+
+	Grade findByCode(String code);
+
 }

@@ -39,4 +39,16 @@ public class GradeService {
 		return listeDesGradesVue;
 	}
 
+	public Grade retrouverGradeEnFonctionId(int id) {
+		// TODO Auto-generated method stub
+
+		return gradeRepository.findById(id);
+	}
+
+	public Grade retrouverGradeEnFonctionCode(String code) {
+		// TODO Auto-generated method stub
+
+		return gradeRepository.findByCode(code);
+	}
+
 }

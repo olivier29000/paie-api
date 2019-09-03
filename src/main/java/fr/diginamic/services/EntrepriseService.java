@@ -45,4 +45,16 @@ public class EntrepriseService {
 		return listeDesEntreprisesVue;
 	}
 
+	public Entreprise retrouverEntrepriseEnFonctionId(int id) {
+		// TODO Auto-generated method stub
+
+		return entrepriseRepository.findById(id);
+	}
+
+	public Entreprise retrouverEntrepriseEnFonctionCode(String code) {
+		// TODO Auto-generated method stub
+
+		return entrepriseRepository.findByCode(code);
+	}
+
 }
