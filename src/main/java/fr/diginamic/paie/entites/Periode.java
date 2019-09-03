@@ -16,6 +16,26 @@ public class Periode {
 	private LocalDate dateDebut;
 	private LocalDate dateFin;
 
+	/**
+	 * Constructeur
+	 * 
+	 */
+	public Periode() {
+		super();
+	}
+
+	/**
+	 * Constructeur
+	 * 
+	 * @param dateDebut
+	 * @param dateFin
+	 */
+	public Periode(LocalDate dateDebut, LocalDate dateFin) {
+		super();
+		this.dateDebut = dateDebut;
+		this.dateFin = dateFin;
+	}
+
 	public LocalDate getDateDebut() {
 		return dateDebut;
 	}

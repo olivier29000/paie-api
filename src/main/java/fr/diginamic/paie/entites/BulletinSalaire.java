@@ -23,6 +23,28 @@ public class BulletinSalaire implements Serializable {
 	private Periode periode;
 	private BigDecimal primeExceptionnelle;
 
+	/**
+	 * Constructeur
+	 * 
+	 */
+	public BulletinSalaire() {
+		super();
+	}
+
+	/**
+	 * Constructeur
+	 * 
+	 * @param remunerationEmploye
+	 * @param periode
+	 * @param primeExceptionnelle
+	 */
+	public BulletinSalaire(RemunerationEmploye remunerationEmploye, Periode periode, BigDecimal primeExceptionnelle) {
+		super();
+		this.remunerationEmploye = remunerationEmploye;
+		this.periode = periode;
+		this.primeExceptionnelle = primeExceptionnelle;
+	}
+
 	public RemunerationEmploye getRemunerationEmploye() {
 		return remunerationEmploye;
 	}

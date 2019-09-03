@@ -1,5 +1,7 @@
 package fr.diginamic.paie.entites;
 
+import java.time.ZonedDateTime;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +16,25 @@ public class RemunerationEmploye {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String matricule;
+
+	@ManyToOne(cascade = CascadeType.PERSIST)
+	private Entreprise entreprise;
+
+	@ManyToOne(cascade = CascadeType.PERSIST)
+	private ProfilRemuneration profilRemuneration;
+
+	@ManyToOne(cascade = CascadeType.PERSIST)
+	private Grade grade;
+
+	private ZonedDateTime dateHeureDeCreation;
+
+	/**
+	 * Constructeur
+	 * 
+	 */
+	public RemunerationEmploye() {
+		super();
+	}
 
 	/**
 	 * Constructeur
@@ -31,15 +52,6 @@ public class RemunerationEmploye {
 		this.profilRemuneration = profilRemuneration;
 		this.grade = grade;
 	}
-
-	@ManyToOne(cascade = CascadeType.PERSIST)
-	private Entreprise entreprise;
-
-	@ManyToOne(cascade = CascadeType.PERSIST)
-	private ProfilRemuneration profilRemuneration;
-
-	@ManyToOne(cascade = CascadeType.PERSIST)
-	private Grade grade;
 
 	public String getMatricule() {
 		return matricule;
@@ -79,5 +91,22 @@ public class RemunerationEmploye {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	/**
+	 * @return the dateHeureDeCreation
+	 */
+	public ZonedDateTime getDateHeureDeCreation() {
+		return dateHeureDeCreation;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param dateHeureDeCreation
+	 *            the dateHeureDeCreation to set
+	 */
+	public void setDateHeureDeCreation(ZonedDateTime dateHeureDeCreation) {
+		this.dateHeureDeCreation = dateHeureDeCreation;
 	}
 }

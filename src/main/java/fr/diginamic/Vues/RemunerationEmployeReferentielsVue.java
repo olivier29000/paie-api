@@ -2,7 +2,7 @@ package fr.diginamic.Vues;
 
 import java.util.List;
 
-public class AjouterUnEmployeVue {
+public class RemunerationEmployeReferentielsVue {
 
 	public List<EntrepriseVue> listeDesEntreprisesVue;
 	public List<GradeVue> listeDesGradesVue;
@@ -15,7 +15,7 @@ public class AjouterUnEmployeVue {
 	 * @param listeDesGrades
 	 * @param listeDesProfilRemunerations
 	 */
-	public AjouterUnEmployeVue(List<EntrepriseVue> listeDesEntreprisesVue, List<GradeVue> listeDesGradesVue,
+	public RemunerationEmployeReferentielsVue(List<EntrepriseVue> listeDesEntreprisesVue, List<GradeVue> listeDesGradesVue,
 			List<ProfilRemunerationVue> listeDesProfilRemunerationsVue) {
 		super();
 		this.listeDesEntreprisesVue = listeDesEntreprisesVue;

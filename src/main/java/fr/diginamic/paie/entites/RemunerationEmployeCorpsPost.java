@@ -1,6 +1,6 @@
 package fr.diginamic.paie.entites;
 
-public class CorpsPostRemunerationEmploye {
+public class RemunerationEmployeCorpsPost {
 
 	private int id;
 	private String matricule;
@@ -16,7 +16,7 @@ public class CorpsPostRemunerationEmploye {
 	 * @param codeProfilRemuneration
 	 * @param codeGrade
 	 */
-	public CorpsPostRemunerationEmploye(String matricule, String codeEntreprise, String codeProfilRemuneration,
+	public RemunerationEmployeCorpsPost(String matricule, String codeEntreprise, String codeProfilRemuneration,
 			String codeGrade) {
 		super();
 		this.matricule = matricule;
@@ -29,7 +29,7 @@ public class CorpsPostRemunerationEmploye {
 	 * Constructeur
 	 * 
 	 */
-	public CorpsPostRemunerationEmploye() {
+	public RemunerationEmployeCorpsPost() {
 		super();
 	}
 

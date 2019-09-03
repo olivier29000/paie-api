@@ -5,13 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fr.diginamic.Vues.AjouterUnEmployeVue;
+import fr.diginamic.Vues.RemunerationEmployeReferentielsVue;
 import fr.diginamic.Vues.EntrepriseVue;
 import fr.diginamic.Vues.GradeVue;
 import fr.diginamic.Vues.ProfilRemunerationVue;
 
 @Service
-public class AjouterUnEmployeService {
+public class RemunerationEmployeReferentielsService {
 
 	@Autowired
 	EntrepriseService entrepriseService;
@@ -27,7 +27,7 @@ public class AjouterUnEmployeService {
 	 * 
 	 * @return une liste d'instances de EntrepriseVue
 	 */
-	public AjouterUnEmployeVue afficherAjouterUnEmploye() {
+	public RemunerationEmployeReferentielsVue afficherReferentielsRemunerationEmploye() {
 		// TODO Auto-generated method stub
 
 		List<EntrepriseVue> listeDesEntreprisesVue = entrepriseService.afficherEntreprises();
@@ -35,7 +35,7 @@ public class AjouterUnEmployeService {
 		List<ProfilRemunerationVue> listeDesProfilRemunerationVue = profilRemunerationService
 				.afficherProfilRemunerations();
 
-		AjouterUnEmployeVue ajouterUnEmployeVue = new AjouterUnEmployeVue(listeDesEntreprisesVue, listeDesGradesVue,
+		RemunerationEmployeReferentielsVue ajouterUnEmployeVue = new RemunerationEmployeReferentielsVue(listeDesEntreprisesVue, listeDesGradesVue,
 				listeDesProfilRemunerationVue);
 
 		return ajouterUnEmployeVue;

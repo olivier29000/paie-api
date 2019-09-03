@@ -6,4 +6,7 @@ import fr.diginamic.paie.entites.RemunerationEmploye;
 
 public interface RemunerationEmployeRepository extends JpaRepository<RemunerationEmploye, String> {
 
+	RemunerationEmploye findByMatricule(String matricule);
+
+	RemunerationEmploye findById(Integer id);
 }
