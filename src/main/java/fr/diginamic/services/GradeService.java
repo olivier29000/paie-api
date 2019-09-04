@@ -1,5 +1,6 @@
 package fr.diginamic.services;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,14 @@ import fr.diginamic.Vues.GradeVue;
 import fr.diginamic.datajpa.GradeRepository;
 import fr.diginamic.paie.entites.Grade;
 
+/**
+ * Ce service permet d'effectuer des reuqtes sur la table GRADE de la bdd Il est
+ * principalement utilisé sur l'url "/grades" et dans la classe
+ * RemunerationEmployeReferentielsService
+ * 
+ * @author Diginamic02
+ *
+ */
 @Service
 public class GradeService {
 
@@ -20,19 +29,24 @@ public class GradeService {
 	private static final Logger logger = org.slf4j.LoggerFactory.getLogger(EntrepriseService.class);
 
 	/**
-	 * Methode afficherEntreprises retourne la liste des entreprises présentes
-	 * en base de donnée sous la forme d'une EntrepriseVue (code + dénomination
-	 * de l'entreprise)
+	 * Methode Cette methode retourne une liste d'objets GradeVue qu'elle
+	 * construit à partir d'une liste d'objets Grade Elle est principalement
+	 * utilisée par la classe RemunerationEmployeReferentielService pour la
+	 * construction de la page "ajouter un employé"
+	 * url:"/referentiel_remuneration_employe"
+	 * 
+	 * 
 	 * 
 	 * @return une liste d'instances de EntrepriseVue
 	 */
-	public List<GradeVue> afficherGrades() {
+	public List<GradeVue> obtenirListeGrades() {
 		// TODO Auto-generated method stub
 
 		List<Grade> listeDesGrades = gradeRepository.findAll();
 		List<GradeVue> listeDesGradesVue = new ArrayList<GradeVue>();
 		for (Grade grade : listeDesGrades) {
-			listeDesGradesVue.add(new GradeVue(grade.getCode(), grade.getNbHeuresBase().multiply(grade.getTauxBase())));
+			listeDesGradesVue.add(new GradeVue(grade.getCode(),
+					grade.getNbHeuresBase().multiply(grade.getTauxBase()).multiply(new BigDecimal(12))));
 		}
 		logger.info(listeDesGrades.toString());
 
@@ -45,6 +59,13 @@ public class GradeService {
 		return gradeRepository.findById(id);
 	}
 
+	/**
+	 * Methode Cette methode effectue une requete dans la table GRADE de la BDD
+	 * et retourne un objet Grade dont le code (en paramètre) correspond.
+	 * 
+	 * @param code
+	 * @return
+	 */
 	public Grade retrouverGradeEnFonctionCode(String code) {
 		// TODO Auto-generated method stub
 

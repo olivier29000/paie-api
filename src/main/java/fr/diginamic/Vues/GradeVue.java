@@ -2,6 +2,15 @@ package fr.diginamic.Vues;
 
 import java.math.BigDecimal;
 
+/**
+ * Classe GradeVue Elle est envoyée au front via l'objet
+ * RemunerationEmployeReferentielsVue qu'elle caratérise.
+ * 
+ * représente une vue de l'objet Grade.
+ * 
+ * @author Diginamic02
+ *
+ */
 public class GradeVue {
 
 	public String code;

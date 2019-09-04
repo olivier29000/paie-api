@@ -7,6 +7,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * 
+ * Classe représentant un grade dans la base de donnée. colonnnes de la bdd: ID
+ * CODE NB_HEURES_BASE TAUX_BASE
+ * 
+ * Le grade est principalement utilisé pour savoir le salaire de l'employé le
+ * code du grade détermine le taux horaire de l'employé
+ * 
+ * @author Diginamic02
+ *
+ */
 @Entity
 public class Grade {
 

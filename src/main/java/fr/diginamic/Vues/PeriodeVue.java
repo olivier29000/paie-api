@@ -2,6 +2,13 @@ package fr.diginamic.Vues;
 
 import java.time.LocalDate;
 
+/**
+ * Cette classe représente la vue (front) d'un objet Periode. Elle est envoyée
+ * au front via l'objet BulletinDeSalaireReferentielsVue qu'elle caracterise.
+ * 
+ * @author Diginamic02
+ *
+ */
 public class PeriodeVue {
 
 	int id;

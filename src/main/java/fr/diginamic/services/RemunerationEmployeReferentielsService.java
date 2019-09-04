@@ -5,11 +5,21 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fr.diginamic.Vues.RemunerationEmployeReferentielsVue;
 import fr.diginamic.Vues.EntrepriseVue;
 import fr.diginamic.Vues.GradeVue;
 import fr.diginamic.Vues.ProfilRemunerationVue;
+import fr.diginamic.Vues.RemunerationEmployeReferentielsVue;
 
+/**
+ * 
+ * Cette classe permet d'envoyer les information necessaire au front pour la
+ * construction de la page "ajouter un employé" Cette page a besoin/Ce service
+ * permet l'envoi: _de la liste des entreprisess en BDD _de la liste des profils
+ * (de rémunerations) présents en BDD _de la liste des grades présents en BDD
+ * 
+ * @author Diginamic02
+ *
+ */
 @Service
 public class RemunerationEmployeReferentielsService {
 
@@ -21,22 +31,23 @@ public class RemunerationEmployeReferentielsService {
 	ProfilRemunerationService profilRemunerationService;
 
 	/**
-	 * Methode afficherEntreprises retourne la liste des entreprises présentes
-	 * en base de donnée sous la forme d'une EntrepriseVue (code + dénomination
-	 * de l'entreprise)
+	 * Methode Cette methode permet d'obtenir la liste des entreprisess en BDD,
+	 * la liste des profils (de rémunerations) présents en BDD, la liste des
+	 * grades présents en BDD sous la forme d'un objet
+	 * BulletinDeSalaireReferentielsVue
 	 * 
-	 * @return une liste d'instances de EntrepriseVue
+	 * @return
 	 */
-	public RemunerationEmployeReferentielsVue afficherReferentielsRemunerationEmploye() {
+	public RemunerationEmployeReferentielsVue obtenirListeDesRemunerationEmployeReferentielsVue() {
 		// TODO Auto-generated method stub
 
-		List<EntrepriseVue> listeDesEntreprisesVue = entrepriseService.afficherEntreprises();
-		List<GradeVue> listeDesGradesVue = gradeService.afficherGrades();
+		List<EntrepriseVue> listeDesEntreprisesVue = entrepriseService.obtenirListeEntreprisesVues();
+		List<GradeVue> listeDesGradesVue = gradeService.obtenirListeGrades();
 		List<ProfilRemunerationVue> listeDesProfilRemunerationVue = profilRemunerationService
-				.afficherProfilRemunerations();
+				.obtenirListeProfilRemunerationsVue();
 
-		RemunerationEmployeReferentielsVue ajouterUnEmployeVue = new RemunerationEmployeReferentielsVue(listeDesEntreprisesVue, listeDesGradesVue,
-				listeDesProfilRemunerationVue);
+		RemunerationEmployeReferentielsVue ajouterUnEmployeVue = new RemunerationEmployeReferentielsVue(
+				listeDesEntreprisesVue, listeDesGradesVue, listeDesProfilRemunerationVue);
 
 		return ajouterUnEmployeVue;
 	}

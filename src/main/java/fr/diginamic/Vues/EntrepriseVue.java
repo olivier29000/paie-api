@@ -1,8 +1,12 @@
 package fr.diginamic.Vues;
 
 /**
+ * Classe EntrepriseVue Elle est envoyée au front via l'objet
+ * RemunerationEmployeReferentielsVue qu'elle caratérise.
+ * 
  * représente une vue de l'objet Entreprise. Cette vue est caractérisée par code
- * et dénomination qui sont eux même des attributs de l'objet Entreprise
+ * et dénomination qui sont eux même des attributs de l'objet Entreprise.
+ * 
  * 
  * @author Diginamic02
  *

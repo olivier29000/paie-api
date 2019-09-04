@@ -2,6 +2,14 @@ package fr.diginamic.Vues;
 
 import java.util.List;
 
+/**
+ * Classe RemunerationEmployeReferentielsVue Cette classe est envoyée au front
+ * pour la construction de la page "ajouter un employé" url:
+ * "/referentiel_remuneration_employe"
+ * 
+ * @author Diginamic02
+ *
+ */
 public class RemunerationEmployeReferentielsVue {
 
 	public List<EntrepriseVue> listeDesEntreprisesVue;
@@ -15,8 +23,8 @@ public class RemunerationEmployeReferentielsVue {
 	 * @param listeDesGrades
 	 * @param listeDesProfilRemunerations
 	 */
-	public RemunerationEmployeReferentielsVue(List<EntrepriseVue> listeDesEntreprisesVue, List<GradeVue> listeDesGradesVue,
-			List<ProfilRemunerationVue> listeDesProfilRemunerationsVue) {
+	public RemunerationEmployeReferentielsVue(List<EntrepriseVue> listeDesEntreprisesVue,
+			List<GradeVue> listeDesGradesVue, List<ProfilRemunerationVue> listeDesProfilRemunerationsVue) {
 		super();
 		this.listeDesEntreprisesVue = listeDesEntreprisesVue;
 		this.listeDesGradesVue = listeDesGradesVue;
@@ -24,54 +32,54 @@ public class RemunerationEmployeReferentielsVue {
 	}
 
 	/**
-	 * @return the listeDesEntreprises
+	 * @return the listeDesEntreprisesVue
 	 */
-	public List<EntrepriseVue> getListeDesEntreprises() {
+	public List<EntrepriseVue> getListeDesEntreprisesVue() {
 		return listeDesEntreprisesVue;
 	}
 
 	/**
 	 * Setter
 	 * 
-	 * @param listeDesEntreprises
-	 *            the listeDesEntreprises to set
+	 * @param listeDesEntreprisesVue
+	 *            the listeDesEntreprisesVue to set
 	 */
-	public void setListeDesEntreprises(List<EntrepriseVue> listeDesEntreprises) {
-		this.listeDesEntreprisesVue = listeDesEntreprises;
+	public void setListeDesEntreprisesVue(List<EntrepriseVue> listeDesEntreprisesVue) {
+		this.listeDesEntreprisesVue = listeDesEntreprisesVue;
 	}
 
 	/**
-	 * @return the listeDesGrades
+	 * @return the listeDesGradesVue
 	 */
-	public List<GradeVue> getListeDesGrades() {
+	public List<GradeVue> getListeDesGradesVue() {
 		return listeDesGradesVue;
 	}
 
 	/**
 	 * Setter
 	 * 
-	 * @param listeDesGrades
-	 *            the listeDesGrades to set
+	 * @param listeDesGradesVue
+	 *            the listeDesGradesVue to set
 	 */
-	public void setListeDesGrades(List<GradeVue> listeDesGrades) {
-		this.listeDesGradesVue = listeDesGrades;
+	public void setListeDesGradesVue(List<GradeVue> listeDesGradesVue) {
+		this.listeDesGradesVue = listeDesGradesVue;
 	}
 
 	/**
-	 * @return the listeDesProfilRemunerations
+	 * @return the listeDesProfilRemunerationsVue
 	 */
-	public List<ProfilRemunerationVue> getListeDesProfilRemunerations() {
+	public List<ProfilRemunerationVue> getListeDesProfilRemunerationsVue() {
 		return listeDesProfilRemunerationsVue;
 	}
 
 	/**
 	 * Setter
 	 * 
-	 * @param listeDesProfilRemunerations
-	 *            the listeDesProfilRemunerations to set
+	 * @param listeDesProfilRemunerationsVue
+	 *            the listeDesProfilRemunerationsVue to set
 	 */
-	public void setListeDesProfilRemunerations(List<ProfilRemunerationVue> listeDesProfilRemunerations) {
-		this.listeDesProfilRemunerationsVue = listeDesProfilRemunerations;
+	public void setListeDesProfilRemunerationsVue(List<ProfilRemunerationVue> listeDesProfilRemunerationsVue) {
+		this.listeDesProfilRemunerationsVue = listeDesProfilRemunerationsVue;
 	}
 
 }

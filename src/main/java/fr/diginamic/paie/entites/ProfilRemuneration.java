@@ -10,6 +10,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+/**
+ * 
+ * Classe représentant les profils de rémunartion dans la base de donnée.
+ * colonnnes de la bdd: ID CODE
+ * 
+ * Le profil de rémunération permet de retrouver la liste des cotisations d'un
+ * employé grâce à la table de jointure PROFIL_REMUNERATION_COTISATION qui liste
+ * les id des cotisations en fonction de l'id du profil de rémurations
+ * 
+ * @author Diginamic02
+ *
+ */
 @Entity
 public class ProfilRemuneration {
 

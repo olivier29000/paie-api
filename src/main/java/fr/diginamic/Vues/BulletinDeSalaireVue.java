@@ -1,17 +1,27 @@
 package fr.diginamic.Vues;
 
+import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
 import fr.diginamic.paie.entites.Periode;
 
+/**
+ * Classe BulletinDeSalaireVue Cette classe est envoyée au front pour construire
+ * la page "liste des bulletins de salaire" url: "/bulletins_de_salaires" Elle
+ * représente (au niveau front) une ligne du tableau listant tous les bulletins
+ * de salaires déjà créés.
+ * 
+ * @author Diginamic02
+ *
+ */
 public class BulletinDeSalaireVue {
 
 	private ZonedDateTime dateHeureCreation;
 	private Periode periode;
 	private String matricule;
-	private double salaireBrut;
-	private double netImposable;
-	private double netAPayer;
+	private BigDecimal salaireBrut;
+	private BigDecimal netImposable;
+	private BigDecimal netAPayer;
 
 	/**
 	 * Constructeur
@@ -31,8 +41,8 @@ public class BulletinDeSalaireVue {
 	 * @param netImposable
 	 * @param netAPayer
 	 */
-	public BulletinDeSalaireVue(ZonedDateTime dateHeureCreation, Periode periode, String matricule, double salaireBrut,
-			double netImposable, double netAPayer) {
+	public BulletinDeSalaireVue(ZonedDateTime dateHeureCreation, Periode periode, String matricule,
+			BigDecimal salaireBrut, BigDecimal netImposable, BigDecimal netAPayer) {
 		super();
 		this.dateHeureCreation = dateHeureCreation;
 		this.periode = periode;
@@ -96,7 +106,7 @@ public class BulletinDeSalaireVue {
 	/**
 	 * @return the salaireBrut
 	 */
-	public double getSalaireBrut() {
+	public BigDecimal getSalaireBrut() {
 		return salaireBrut;
 	}
 
@@ -106,14 +116,14 @@ public class BulletinDeSalaireVue {
 	 * @param salaireBrut
 	 *            the salaireBrut to set
 	 */
-	public void setSalaireBrut(double salaireBrut) {
+	public void setSalaireBrut(BigDecimal salaireBrut) {
 		this.salaireBrut = salaireBrut;
 	}
 
 	/**
 	 * @return the netImposable
 	 */
-	public double getNetImposable() {
+	public BigDecimal getNetImposable() {
 		return netImposable;
 	}
 
@@ -123,14 +133,14 @@ public class BulletinDeSalaireVue {
 	 * @param netImposable
 	 *            the netImposable to set
 	 */
-	public void setNetImposable(double netImposable) {
+	public void setNetImposable(BigDecimal netImposable) {
 		this.netImposable = netImposable;
 	}
 
 	/**
 	 * @return the netAPayer
 	 */
-	public double getNetAPayer() {
+	public BigDecimal getNetAPayer() {
 		return netAPayer;
 	}
 
@@ -140,7 +150,7 @@ public class BulletinDeSalaireVue {
 	 * @param netAPayer
 	 *            the netAPayer to set
 	 */
-	public void setNetAPayer(double netAPayer) {
+	public void setNetAPayer(BigDecimal netAPayer) {
 		this.netAPayer = netAPayer;
 	}
 

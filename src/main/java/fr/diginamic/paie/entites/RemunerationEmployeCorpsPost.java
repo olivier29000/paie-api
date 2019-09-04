@@ -1,5 +1,15 @@
 package fr.diginamic.paie.entites;
 
+/**
+ * Classe représentant le corps de la requete http lors de l'insertion d'une
+ * RemunerationEmploye dans la bdd. grace à la méthode POST de l'url
+ * "/remuneration_employe"
+ * 
+ * 
+ * 
+ * @author Diginamic02
+ *
+ */
 public class RemunerationEmployeCorpsPost {
 
 	private int id;

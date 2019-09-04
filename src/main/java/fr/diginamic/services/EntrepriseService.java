@@ -12,7 +12,9 @@ import fr.diginamic.datajpa.EntrepriseRepository;
 import fr.diginamic.paie.entites.Entreprise;
 
 /**
- * Classe EntrepriseService
+ * Ce Service permet d'effectuer des requetes dans la table ENTREPRISE de la BDD
+ * Il est principalement utilisé sur l'url "/entreprises" et dans la classe
+ * RemunerationEmployeReferentielsService
  * 
  * @author Diginamic02
  *
@@ -27,12 +29,12 @@ public class EntrepriseService {
 
 	/**
 	 * Methode afficherEntreprises retourne la liste des entreprises présentes
-	 * en base de donnée sous la forme d'une EntrepriseVue (code + dénomination
-	 * de l'entreprise)
+	 * dans la table NETREPRISE de la BDD sous la forme d'un objet EntrepriseVue
+	 * (code + dénomination de l'entreprise)
 	 * 
 	 * @return une liste d'instances de EntrepriseVue
 	 */
-	public List<EntrepriseVue> afficherEntreprises() {
+	public List<EntrepriseVue> obtenirListeEntreprisesVues() {
 		// TODO Auto-generated method stub
 
 		List<Entreprise> listeDesEntreprises = entrepriseRepository.findAll();
@@ -45,12 +47,25 @@ public class EntrepriseService {
 		return listeDesEntreprisesVue;
 	}
 
+	/**
+	 * Methode Cette methode retourne un objet Entreprise en fonction d'un ID
+	 * 
+	 * @param id
+	 * @return
+	 */
 	public Entreprise retrouverEntrepriseEnFonctionId(int id) {
 		// TODO Auto-generated method stub
 
 		return entrepriseRepository.findById(id);
 	}
 
+	/**
+	 * Methode Cette methode retourne un objet Entreprise (table ENTREPRISE de
+	 * la BDD) en fonction d'un CODE
+	 * 
+	 * @param code
+	 * @return
+	 */
 	public Entreprise retrouverEntrepriseEnFonctionCode(String code) {
 		// TODO Auto-generated method stub
 

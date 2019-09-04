@@ -1,5 +1,13 @@
 package fr.diginamic.Vues;
 
+/**
+ * Cette classe représente la vue (front) d'un objet ProfilRemuneration. Elle
+ * est envoyée au front via l'objet RemunerationEmployeReferentielsVue qu'elle
+ * caracterise.
+ * 
+ * @author Diginamic02
+ *
+ */
 public class ProfilRemunerationVue {
 
 	public String statut;

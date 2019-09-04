@@ -2,6 +2,15 @@ package fr.diginamic.paie.entites;
 
 import java.math.BigDecimal;
 
+/**
+ * 
+ * Classe représentant le corps de la requete http lors de l'insertion d'un
+ * bulletin de salaire dans la base de donnée (grace à l'url
+ * /bulletin_de_salaire en POST)
+ * 
+ * @author Diginamic02
+ *
+ */
 public class BulletinDeSalaireCorpsPost {
 
 	public Integer idPeriode;

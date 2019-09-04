@@ -2,6 +2,7 @@ package fr.diginamic.paie.entites;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +10,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+/**
+ * Classe représentant un bulletin de salaire dans la base de donnée colonnnes
+ * de la bdd: ID PRIME_EXCEPTIONNELLE PERIODE_ID REMUNERATION_EMPLOYE_ID
+ * 
+ * @author Diginamic02
+ *
+ */
 @Entity
 public class BulletinSalaire implements Serializable {
 
@@ -22,6 +30,7 @@ public class BulletinSalaire implements Serializable {
 	@ManyToOne
 	private Periode periode;
 	private BigDecimal primeExceptionnelle;
+	private String code;
 
 	/**
 	 * Constructeur
@@ -43,6 +52,7 @@ public class BulletinSalaire implements Serializable {
 		this.remunerationEmploye = remunerationEmploye;
 		this.periode = periode;
 		this.primeExceptionnelle = primeExceptionnelle;
+		this.code = UUID.randomUUID().toString();
 	}
 
 	public RemunerationEmploye getRemunerationEmploye() {

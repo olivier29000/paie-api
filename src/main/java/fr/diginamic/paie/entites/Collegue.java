@@ -11,6 +11,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * @author Diginamic02 Classe représentant un collegue de l'api
+ *         https://olivier-collegues-api.herokuapp.com/collegues Dans cette
+ *         application on va principalement vérifier si le matricule inséré est
+ *         présent dans cette API Sinon l'insertion dans la bdd de paie-api est
+ *         refusée
+ */
 @Entity
 @Getter
 @Setter

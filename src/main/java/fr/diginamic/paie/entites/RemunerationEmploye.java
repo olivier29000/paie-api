@@ -9,6 +9,22 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+/**
+ * 
+ * Classe représentant les rémunerationsEmployés dans la base de donnée.
+ * colonnnes de la bdd: ID DATE_HEURE_DE_CREATION MATRICULE ENTREPRISE_ID
+ * GRADE_ID PROFIL_REMUNERATION_ID
+ * 
+ * En pratique c'est l'utilisateur qui remplit les lignes de cette bdd grâce à
+ * la méthode POST de l'url "/remuneration_employe" et une requete POST Http
+ * avec un corps contenant un objet RemunerationEmployeCorpsPost IMPORTANT: Pour
+ * insérer un bulletin de salaire dans la bdd il faut avoir créé une
+ * rémuneration employé dans la bdd avec le même matricule que le bulletin de
+ * salaire inséré
+ * 
+ * @author Diginamic02
+ *
+ */
 @Entity
 public class RemunerationEmploye {
 

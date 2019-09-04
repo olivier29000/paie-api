@@ -2,6 +2,14 @@ package fr.diginamic.Vues;
 
 import java.time.ZonedDateTime;
 
+/**
+ * Classe RemunerationEmployeVue Cette classe est envoyée au front pour la
+ * construction de la page "liste des employés" url: /remuneration_employé Cette
+ * classe représente une ligne du tableau (coté front) "liste des employés"
+ * 
+ * @author Diginamic02
+ *
+ */
 public class RemunerationEmployeVue {
 
 	ZonedDateTime dateHeureDeCreation;

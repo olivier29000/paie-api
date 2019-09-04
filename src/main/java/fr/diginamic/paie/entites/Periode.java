@@ -7,6 +7,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * 
+ * Classe représentant les périodes dans la base de donnée. colonnnes de la bdd:
+ * ID DATE_DEBUT DATE_FIN
+ * 
+ * en pratique dans la bdd les périodes sont celles de chaque mois de l'année
+ * (avec une dateDebut au 1er du mois et uune dateFin au 30 ou 31 du mois)
+ * 
+ * @author Diginamic02
+ *
+ */
 @Entity
 public class Periode {
 

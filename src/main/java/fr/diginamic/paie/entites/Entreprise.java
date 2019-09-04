@@ -5,6 +5,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * 
+ * Classe représentant une entreprise dans la base de donnée. colonnnes de la
+ * bdd: ID ADRESSE CODE CODE_NAF DENOMINATION SIRET URSSAF
+ * 
+ * @author Diginamic02
+ *
+ */
 @Entity
 public class Entreprise {
 

@@ -7,6 +7,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * Classe représentant une cotisation dans la base de donnée. colonnnes de la
+ * bdd: ID CODE IMPOSABLE LIBELLE TAUX_PATRONAL TAUX_SALARIAL
+ * 
+ * @author Diginamic02
+ *
+ */
 @Entity
 public class Cotisation {
 

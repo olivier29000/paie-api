@@ -11,6 +11,13 @@ import fr.diginamic.Vues.ProfilRemunerationVue;
 import fr.diginamic.datajpa.ProfilRemunerationRepository;
 import fr.diginamic.paie.entites.ProfilRemuneration;
 
+/**
+ * Ce service permet d'effectuer des requetes sur la table PROFIL_REMUNERATION
+ * de la BDD
+ * 
+ * @author Diginamic02
+ *
+ */
 @Service
 public class ProfilRemunerationService {
 
@@ -20,13 +27,16 @@ public class ProfilRemunerationService {
 	private static final Logger logger = org.slf4j.LoggerFactory.getLogger(ProfilRemunerationService.class);
 
 	/**
-	 * Methode afficherEntreprises retourne la liste des entreprises présentes
-	 * en base de donnée sous la forme d'une EntrepriseVue (code + dénomination
-	 * de l'entreprise)
+	 * Methode Cette methode retourne une liste d'objets ProfilRemunerationVue
+	 * qu'elle aura obtenu à partir d'une liste d'objets ProfilRemuneration, eux
+	 * même obtenus grâce à une requete sur la table PROFIL_REMUNERATION de la
+	 * BDD. Cette methode sert principalement dans la classe
+	 * RemunerationEmployeReferentielService afin de construire le front de la
+	 * page "ajouter un employé" url:"/referentiel_remuneration_employe"
 	 * 
 	 * @return une liste d'instances de EntrepriseVue
 	 */
-	public List<ProfilRemunerationVue> afficherProfilRemunerations() {
+	public List<ProfilRemunerationVue> obtenirListeProfilRemunerationsVue() {
 		// TODO Auto-generated method stub
 
 		List<ProfilRemuneration> listeDesProfilRemunerations = profilRemunerationRepository.findAll();
@@ -45,6 +55,13 @@ public class ProfilRemunerationService {
 		return profilRemunerationRepository.findById(id);
 	}
 
+	/**
+	 * Cette methode retourne un objet ProfilRemuneration correspondant à un
+	 * code grâce a une requete dans la table PROFIL_REMUNERATION de la BDD
+	 * 
+	 * @param code
+	 * @return
+	 */
 	public ProfilRemuneration retrouverProfilRemunerationEnFonctionCode(String code) {
 		// TODO Auto-generated method stub
 
