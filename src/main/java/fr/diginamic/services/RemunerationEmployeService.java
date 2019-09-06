@@ -84,7 +84,13 @@ public class RemunerationEmployeService {
 	 */
 	public boolean matriculeExisteDejaDansRemunerationEmploye(String matricule) {
 		boolean resultat = false;
-		List<RemunerationEmploye> listeDesRemunerationEmploye = remunerationEmployeRepository.findAll();
+		List<RemunerationEmploye> listeDesRemunerationEmploye = remunerationEmployeRepository.findAll();// EVITER
+																										// LES
+																										// FIND
+																										// ALL.
+																										// UTILISER
+																										// PLUTOT
+																										// FINDBYMATRICULE
 		for (RemunerationEmploye remunerationEmploye : listeDesRemunerationEmploye) {
 			if (remunerationEmploye.getMatricule().equals(matricule)) {
 				resultat = true;

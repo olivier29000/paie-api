@@ -3,6 +3,7 @@ package fr.diginamic.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +12,7 @@ import fr.diginamic.Vues.ProfilRemunerationVue;
 import fr.diginamic.services.ProfilRemunerationService;
 
 @RestController
+@Secured("ROLE_ADMIN")
 @RequestMapping(path = "/profilRemunerations")
 public class ProfilRemunerationController {
 	@Autowired

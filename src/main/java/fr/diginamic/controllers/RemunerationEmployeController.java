@@ -3,6 +3,7 @@ package fr.diginamic.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,15 @@ import fr.diginamic.services.GradeService;
 import fr.diginamic.services.ProfilRemunerationService;
 import fr.diginamic.services.RemunerationEmployeService;
 
+/**
+ * Classe Controlleur RemunerationEmployeController gère l'url
+ * "/remuneration_employe"
+ * 
+ * @author Diginamic02
+ *
+ */
 @RestController
+@Secured("ROLE_ADMIN")
 @RequestMapping(path = "/remuneration_employe")
 public class RemunerationEmployeController {
 

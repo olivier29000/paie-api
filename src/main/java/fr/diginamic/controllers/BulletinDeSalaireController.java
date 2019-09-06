@@ -21,6 +21,7 @@ import fr.diginamic.services.PeriodeService;
 import fr.diginamic.services.RemunerationEmployeService;
 
 @RestController
+
 @RequestMapping(path = "/bulletin_de_salaire")
 public class BulletinDeSalaireController {
 

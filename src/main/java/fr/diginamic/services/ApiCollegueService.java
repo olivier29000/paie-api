@@ -1,5 +1,9 @@
 package fr.diginamic.services;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -43,6 +47,19 @@ public class ApiCollegueService {
 				resultat = true;
 			}
 		}
+		return resultat;
+	}
+
+	public ResponseEntity<String> postAuthentification() {
+
+		RestTemplate rt = new RestTemplate();
+		HttpHeaders entete = new HttpHeaders();
+		entete.setContentType(MediaType.APPLICATION_JSON);
+		HttpEntity<String> request = new HttpEntity<String>("{\"nomUtilisateur\":\"u1\",\"motDePasse\":\"pass1\"}",
+				entete);
+		ResponseEntity<String> resultat = rt.postForEntity("http://localhost:8081/auth", request, String.class);
+		// String result = rt.postForObject("http://localhost:8081/auth",
+		// request, String.class);
 		return resultat;
 	}
 
